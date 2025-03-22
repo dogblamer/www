@@ -49,7 +49,7 @@ export default defineConfig({
         plugins: [CompressionPlugin(), svgr()],
         server: {
             watch: {
-                usePolling: true,
+                usePolling: false,
                 interval: 1000,
             },
         },
