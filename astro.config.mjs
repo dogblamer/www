@@ -4,7 +4,6 @@ import CompressionPlugin from "vite-plugin-compression";
 import sitemap from "@astrojs/sitemap";
 import svgr from "vite-plugin-svgr";
 import tailwind from "@astrojs/tailwind";
-import cloudflare from '@astrojs/cloudflare';
 
 export const siteUrl = "http://localhost:4321";
 
@@ -13,9 +12,7 @@ const date = new Date().toISOString();
 export default defineConfig({
     site: siteUrl + "/",
 
-  output: 'server',
-    adapter: cloudflare(),
-    integrations: [
+        integrations: [
         tailwind(),
         react(),
         svgr(),
