@@ -1,0 +1,110 @@
+---
+import Layout from "layouts/Layout.astro";
+import { Hero } from "@libs/ui/blocks/Hero";
+import { Structure } from "@libs/ui/blocks/Structure";
+import { TechStack } from "@libs/ui/blocks/TechStack";
+---
+
+<Layout
+    title="dogblamer"
+    description="self-proclaimed mensa certfified linux enthusiast"
+>
+    <main class="bg-secondary">
+        <Hero
+            title="dogblamer"
+            description="self-proclaimed mensa certfified linux enthusiast"
+            client:load
+        />
+        <Structure
+            title="My projects"
+            description="An overview of my currently maintained github projects"
+            items={[
+                {
+                    name: "www",
+                    type: "folder",
+                    items: [
+                        {
+                            name: "layouts",
+                            type: "folder",
+	    		    description: "https://blamer.dog, the structure of the website",
+                        },
+                   	   ],
+                },
+                {
+                    name: "dogblamer-overlay",
+                    type: "folder",
+	   	    description: "A gentoo-overlay with some custom ebuilds",
+	    	    items: [
+	    		{
+	    		    name: "games-rpg/bolt-launcher-14.0.ebuild",
+	    		    type: "file",
+	    		},
+	    		{
+	    		    name: "games-util/r2modman-bin-3.1.57.ebuild",
+	    		    type: "file",
+	    		},
+	    		   ],  
+	        },
+                    {
+                    	name: "dotfiles",
+	    	    	type: "folder",
+	     	    	description: ".config and  etc/portage dotfiles",
+                    },
+            ]}
+            client:visible
+        />
+        <TechStack
+            title="system"
+	    description=""
+            technologies={[
+                {
+                    name: "workstation",
+                    description:
+                        "My main workstation that I daily drive",
+	    	    benefits: [
+	    		"Gentoo Linux (x86_64) OpenRC",
+                        "AMD Ryzen 7 7800X3D",
+                        "Gigabyte Radeon RX 7800 XTi 16GB",
+                        "Gigabyte B650 EAGLE AX ATX AM5 Motherboard",
+	    		"Corsair Vengeance 32GB DDR5-6000",
+	    		"Corsair 4000D ATX Mid Tower Case",
+	    		"Corsair RM750x (2021) 750W 80+",
+	    		"Western Digital M.2-2280",
+	    		"ARTIC Liquid Freezer III 240",
+                    ],
+                },
+                {
+                    name: "raspberry Pi 4 Model B",
+                    description: "My raspberry pi where I self-host some applications",
+                    benefits: [
+                        "Custom raspberry pi 4 kernel",
+                        "Gentoo Linux (aarch64) OpenRC",
+                        "Hosting vaultwarden",
+                    ],
+                },
+                {
+                    name: "peripherals",
+                    description: "My hardware devices",
+                    benefits: [
+                        "HyperX Alloy Origins 60",
+                        "Logitech G703",
+                        "Samsung Odyssey G30A FHD 144Hz (24 inch)",
+                        "Samsung Odyssey G3 G30D FHD 180Hz (24 inch)",
+                    ],
+                },
+                {
+                    name: "audio peripherals",
+	    	    description: "Also hardware devices but audio",
+                    benefits: [
+                        "Rode PodMic",
+                        "Behringer UMC22",
+                        "Beyerdynamic DT 990 Pro 250 OHM",
+	    		"FiiO Q3 dac/amp",
+	    		"M-Audio AV30",
+                    ],
+                },
+            ]}
+            client:visible
+        />
+    </main>
+</Layout>
