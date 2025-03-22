@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import svgr from "vite-plugin-svgr";
 import tailwind from "@astrojs/tailwind";
 
-export const siteUrl = "http://localhost:4321";
+export const siteUrl = "https://blamer.dog";
 
 const date = new Date().toISOString();
 // https://astro.build/config
@@ -47,6 +47,12 @@ export default defineConfig({
     prerender: true,
     vite: {
         plugins: [CompressionPlugin(), svgr()],
+        server: {
+            watch: {
+                usePolling: true,
+                interval: 1000,
+            },
+        },
     },
     buildOptions: {
         minify: true,
