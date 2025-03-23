@@ -22,40 +22,41 @@ import { TechStack } from "@libs/ui/blocks/TechStack";
                 {
                     name: "www",
                     type: "folder",
+                    description: "https://blamer.dog, the current website",
                     items: [
                         {
-                            name: "layouts",
+                            name: "src",
                             type: "folder",
-	    		    description: "https://blamer.dog, the structure of the website",
+	    		                  description: "content of the website",
                         },
                    	   ],
                 },
                 {
                     name: "dogblamer-overlay",
                     type: "folder",
-	   	    description: "A gentoo-overlay with some custom ebuilds",
-	    	    items: [
-	    		{
-	    		    name: "games-rpg/bolt-launcher-14.0.ebuild",
-	    		    type: "file",
-	    		},
-	    		{
-	    		    name: "games-util/r2modman-bin-3.1.57.ebuild",
-	    		    type: "file",
-	    		},
+	   	              description: "A gentoo-overlay with some custom ebuilds",
+	    	            items: [
+	    	                	{
+	    		                name: "games-rpg/bolt-launcher-14.0.ebuild",
+	    		                type: "file",
+	    		                },
+	    	                	{
+	    		                name: "games-util/r2modman-bin-3.1.57.ebuild",
+	    		                type: "file",
+	    	                	},
 	    		   ],  
 	        },
                     {
-                    	name: "dotfiles",
-	    	    	type: "folder",
-	     	    	description: ".config and  etc/portage dotfiles",
+                    name: "dotfiles",
+	    	    	      type: "folder",
+	     	    	      description: ".config and  etc/portage dotfiles",
                     },
             ]}
             client:visible
         />
         <TechStack
-            title="system"
-	    description=""
+            title="My system"
+	    description="Some of the hardware I use"
             technologies={[
                 {
                     name: "workstation",
